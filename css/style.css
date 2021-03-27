@@ -311,7 +311,8 @@ header {
 }
 
 .service {
-    max-width: 500px;
+    max-width: 250px;
+    min-width: 200px;
     margin: 0 auto;
 }
 

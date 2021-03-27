@@ -368,6 +368,10 @@ header {
     }
 }
 
+.about-me__certifications{
+    padding-top: 1em;
+}
+
 /* My Work */
 .my-work {
     background-color: var(--clr-dark) ;

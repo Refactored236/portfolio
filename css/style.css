@@ -463,3 +463,6 @@ header {
     margin-left: auto;
     margin-right: auto;
 }
+.portfolio-item-individual img{
+margin: 0 auto;
+}

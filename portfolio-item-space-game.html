@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF=8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Refactored.dev</title>
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css">
+        <script src="https://kit.fontawesome.com/a0b5207e5c.js" crossorigin="anonymous"></script>
+        <link rel="stylesheet" href="./css/style.css">
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Source+Code+Pro:400,99|Source+Sans+Pro:300,900&display=swap">
+    </head>
+    <body>
+        <header>
+            <div class="logo">
+                <a href="/">
+                    <img src="./img/refactored-dev-logo.png" alt="">
+                </a>
+            </div>
+            <button class="nav-toggle" aria-label="toggle navigation">
+                <span class="hamburger"></span>
+            </button>
+            <nav class="nav">
+                <ul class="nav__list">
+                    <li class="nav__item"><a href="./" class="nav__link">Home</a></li>
+                    <li class="nav__item"><a href="./#services" class="nav__link">My Services</a></li>
+                    <li class="nav__item"><a href="./#about" class="nav__link">About Me</a></li>
+                    <li class="nav__item"><a href="./#work" class="nav__link">My Work</a></li>
+                </ul>
+            </nav>
+        </header>
+
+         <!-- Introduction -->
+         <section class="intro">
+            <h1 class="section__title section__title--intro">
+                A basic <strong>Space Shooting Game</strong>
+            </h1>
+            <p class="section__subtitle section__subtitle--intro">A simple space shooting game developed in HTML, CSS and JavaScript</p>
+            <img src="./img/space_game.JPG" alt="space game" class="intro__img">
+        </section>
+
+        <div class="portfolio-item-individual">
+            <p>A simple space game developed following the lessons and tutorials made available via the Microsoft, Web Dev For Beginners repo on <a href="https://github.com/microsoft/Web-Dev-For-Beginners">GitHub</a>.
+                Development leverages basic HTML, CSS and JavaScript to allow a user move, and fire from a hero ship, to destroy alien ships.
+            </p>
+            <p>
+                This basic shooting game presents the user with a controlable hero ship, which can be moved via the arrow keys on a keyboard. The Space
+                key can be used to fire a laser to destroy approaching enemy ships.
+            </p>
+            <p>Graphics for this game have been provided by <a href="http://www.kenney.nl">Kenney Vleugels</a></p>
+            <img src="./img/space-game-no-title.JPG" alt="image of space shooting game">
+            <p>An <a href="https://spacegame.refactored.dev/">implementation of the space game</a> is currently hosted as a Static Web App in Azure.
+                A Static Web App was selected, due to the static nature of the front end solution, and the ability to integrate directly with GitHub native workflows to build and deploy the application.</p>
+            </p>
+            <p>
+                Primary development of the game is via JavaScript. A base Game Object class was created, containing core information required for each functional object in the game i.e. x and y position, type and state.
+                The Hero, Enemy and Laser classes then each extend this base Game Object class, allowing for specific functionality for each object in the game.
+            </p>
+            <p>The core game loop is managed via the setInterval function, continually re-drawing the canvas based on the current game state. This game loop calls a number of functions including updateGameObjects, printScore and drawGameObjects. 
+                This allows for updated positions and other details such as score, to be re-drawn on the interval.</p>
+            <p>Primary interactivity is via the Arrow Keys (movement), Space bar (shooting the laser) and Enter (restarting the game). The default functionality for these buttons is prevented via the preventDefault function, which is called via a keydown Event Listener.</p>
+            <p>The source code and related repository for this implementation of the typing game is available on <a href="https://github.com/Refactored236/Space-Game">GitHub</a>.</p>
+        </div>
+
+        <!-- Footer -->
+        <footer class="footer">
+            <a href="mailto:jason@refactored.dev" class="footer__link">jason@refactored.dev</a>
+            <ul class="social-list">
+                <li class="social-list__item">
+                    <a href="https://www.linkedin.com/in/jason-mccormac-6b993616/?originalSubdomain=ie" class="social-list__link">
+                        <i class="fab fa-linkedin"></i>
+                    </a>
+                </li>
+                <li class="social-list__item">
+                    <a href="https://twitter.com/refactored" class="social-list__link">
+                        <i class="fab fa-twitter"></i>
+                    </a>
+                </li>
+                <li class="social-list__item">
+                    <a href="https://github.com/Refactored236" class="social-list__link">
+                        <i class="fab fa-github"></i>
+                    </a>
+                </li>
+            </ul>
+        </footer>
+
+        <script src="js/index.js"></script>
+    </body>
+</html>

@@ -5,35 +5,35 @@
 
 .portfolio-item-css-items div {
     justify-self: center;
-    margin-top: 1rem;
+    margin-top: 1.5rem;
+    margin-bottom: 1.5rem;
     box-sizing: content-box;
     /* Changing to content box for these items as before/after border box (inherited) impacts on style */
 }
 .portfolio-item-css-items div::after {
     justify-self: center;
-    margin-top: 1rem;
     box-sizing: content-box;
     /* Changing to content box for these items as before/after border box (inherited) impacts on style */
 }
 
 .circle {
-    height: 200px;
-    width: 200px;
+    height: 150px;
+    width: 150px;
     background-color: var(--clr-accent);
     border-radius: 50%;
 }
 
 .semi-circle {
-    height: 100px;
-    width: 200px;
-    background-color: var(--clr-dark);
+    height: 75px;
+    width: 150px;
+    background-color: var(--clr-accent);
     border-radius: 100px 100px 0 0 ;
 }
 
 .triangle {
     width: 0;
     height: 0;
-    border-bottom: 200px solid var(--clr-accent);
+    border-bottom: 150px solid var(--clr-dark);
     border-left: 100px solid transparent;
     border-right: 100px solid transparent;
 }
@@ -41,7 +41,7 @@
 .trapazoid {
     width: 100px;
     height: 0;
-    border-bottom: 100px solid var(--clr-dark);
+    border-bottom: 100px solid var(--clr-accent);
     border-left: 100px solid transparent;
     border-right: 100px solid transparent;
 }
@@ -75,3 +75,86 @@
     bottom:-120px;
 }
 
+.drop {
+    height: 110px;
+    width: 110px;
+    background: var(--clr-dark);
+    border-radius: 0 50% 50% 50%;
+    transform: rotate(45deg);
+}
+
+.diamond {
+    border-style: solid;
+    border-color: transparent transparent var(--clr-dark) transparent;
+    border-width: 0 25px 25px 25px ;
+    height: 0;
+    width: 50px;
+    position: relative;
+}
+
+.diamond::after {
+    content:"";
+    top:25px;
+    left: -25px;
+    width:0;
+    height: 0;
+    border-style: solid;
+    border-width: 70px 50px 0 50px;
+    position: absolute;
+    border-color: var(--clr-dark) transparent transparent transparent;
+}
+
+.cross {
+    background: var(--clr-accent);
+    height: 100px;
+    width: 20px;
+    transform: rotate(45deg);
+    position: relative;
+}
+
+.cross::after {
+    background: var(--clr-accent);
+    position: absolute;
+    content:"";
+    top:40px;
+    width:100px;
+    height: 20px;
+    left: -40px;
+}
+
+.egg {
+    display: block;
+    width: 100px;
+    height: 150px;
+    background: var(--clr-dark);
+    border-radius: 50% 50% 50% 50% / 60% 60% 40% 40% ;
+}
+
+.star {
+    position: relative;
+    width: 0;
+    height: 0;
+    border-bottom: 80px solid var(--clr-accent);
+    border-left: 50px solid transparent;
+    border-right: 50px solid transparent;
+}
+
+.star::before {
+    content:"";
+    position: absolute;
+    left:-50px;
+    top: 25px;
+    width: 0;
+    height: 0;
+    border-top: 80px solid var(--clr-accent);
+    border-left: 50px solid transparent;
+    border-right: 50px solid transparent;
+}
+
+.moon {
+    width: 120px;
+    height: 120px;
+    box-shadow: 22px 22px 0 0 var(--clr-dark);
+    border-radius: 50%;
+
+}

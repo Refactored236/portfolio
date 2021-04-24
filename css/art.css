@@ -1,0 +1,77 @@
+.portfolio-item-css-items {
+    display: grid;
+    grid-template-columns: repeat(auto-fit,minmax(300px, 1fr));
+}
+
+.portfolio-item-css-items div {
+    justify-self: center;
+    margin-top: 1rem;
+    box-sizing: content-box;
+    /* Changing to content box for these items as before/after border box (inherited) impacts on style */
+}
+.portfolio-item-css-items div::after {
+    justify-self: center;
+    margin-top: 1rem;
+    box-sizing: content-box;
+    /* Changing to content box for these items as before/after border box (inherited) impacts on style */
+}
+
+.circle {
+    height: 200px;
+    width: 200px;
+    background-color: var(--clr-accent);
+    border-radius: 50%;
+}
+
+.semi-circle {
+    height: 100px;
+    width: 200px;
+    background-color: var(--clr-dark);
+    border-radius: 100px 100px 0 0 ;
+}
+
+.triangle {
+    width: 0;
+    height: 0;
+    border-bottom: 200px solid var(--clr-accent);
+    border-left: 100px solid transparent;
+    border-right: 100px solid transparent;
+}
+
+.trapazoid {
+    width: 100px;
+    height: 0;
+    border-bottom: 100px solid var(--clr-dark);
+    border-left: 100px solid transparent;
+    border-right: 100px solid transparent;
+}
+
+.parallelogram {
+    width: 200px;
+    height: 100px;
+    background-color: var(--clr-accent);
+    transform: skewX(-20deg);
+}
+
+/* 2 trapeziums, one upside down, aligned to each other */
+.hexagon {
+    position: relative;
+    width: 50px;
+    height: 0;
+    border-bottom: 60px solid var(--clr-dark);
+    border-left: 50px solid transparent;
+    border-right: 50px solid transparent;
+}
+
+.hexagon::after {
+    content: "";
+    position: absolute;
+    width: 50px;
+    height: 0;
+    border-top: 60px solid var(--clr-dark);
+    border-left: 50px solid transparent;
+    border-right: 50px solid transparent;
+    left: -50px;
+    bottom:-120px;
+}
+
